@@ -1,8 +1,12 @@
 title: Jorin
 description: You have reached Jorin's webbed sight
-theme: minima
+remote_theme: jekyll/minima
 plugins:
+  - jekyll-remote-theme
   - jekyll-feed
+
+minima:
+  skin: melatonin
 
 include:
   - .well-known
