@@ -10,3 +10,17 @@ minima:
 
 include:
   - .well-known
+
+links:
+  -
+    title: 'Twitter'
+    text: '@YawningJorin'
+    href: 'https://twitter.com/YawningJorin'
+  -
+    title: 'SoundCloud'
+    text: 'Yawning Girl'
+    href: 'https://soundcloud.com/yawninggirl'
+  -
+    title: 'Bandcamp'
+    text: 'Yawning Girl'
+    href: 'https://yawninggirl.bandcamp.com'

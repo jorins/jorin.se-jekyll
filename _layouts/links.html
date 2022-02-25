@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<ul>
+  {% for link in site.links %}
+  <li>{{ link.title }}:
+    <a rel="me" href={{ link.href }}>
+      {{ link.text }}
+    </a>
+  </li>
+  {% endfor %}
+</ul>
