@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Notes
+description: personal knowledgebase
 permalink: /note/
 ---
-
-Hey look at my notes here

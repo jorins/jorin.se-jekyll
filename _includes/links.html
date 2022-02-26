@@ -1,7 +1,5 @@
----
-layout: default
----
-
+{% if site.links %}
+<h1>External links</h1>
 <ul>
   {% for link in site.links %}
   <li>{{ link.title }}:
@@ -11,3 +9,4 @@ layout: default
   </li>
   {% endfor %}
 </ul>
+{% endif %}

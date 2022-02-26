@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Projects
+description: project documentation and logs
 permalink: /project/
 ---
-
-Check out my projects, nerd
