@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+{% if page.en and page.sv %}
+<h1>{{ page.en }} <span class='note-name-translated'>(sv: {{ page.sv }})</span></h1>
+{% else if page.en %}
+<h1>{{ page.en }}</h1>
+{% else if page.sv %}
+<h1>{{ page.sv }}</h1>
+{% endif %}
+
+{{ content }}
+
+{% if page.sources %}
+<h1>Sources</h1>
+<ol>
+  {% for source in page.sources %}
+  <li><a href={{ source.link }}>{{ source.name }}</a></li>
+  {% endfor %}
+</ol>
+{% endif %}
+
+{% if page.en or page.sv or page.further-reading %}
+<h1>Further reading</h1>
+<ul>
+  {% if page.further-reading %}
+  {% for resource in page.further-reading %}
+  <li>
+    <a href={{ resource.link }}>{{ resource.name }}</a>
+  </li>
+  {% endfor %}
+  {% endif %}
+  {% if page.en %}
+  <li>
+    <a href='https://en.wikipedia.org/wiki/{{ page.en }}'>Wikipedia (en)</a>
+  </li>
+  <li>
+    <a href='https://en.wiktionary.org/wiki/{{ page.en | downcase }}'>Wiktionary (en)</a>
+  </li>
+  {% endif %}
+  {% if page.sv %}
+  <li>
+    <a href='https://sv.wikipedia.org/wiki/{{ page.sv }}'>Wikipedia (sv)</a>
+  </li>
+  <li>
+    <a href='https://sv.wiktionary.org/wiki/{{ page.sv | downcase }}'>Wiktionary (sv)</a>
+  </li>
+  {% endif %}
+</ul>
+{% endif %}

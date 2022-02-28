@@ -2,11 +2,16 @@
 <h1>External links</h1>
 <ul>
   {% for link in site.links %}
-  <li>{{ link.title }}:
+  {% unless link.text %}
+  <li><a rel="me" href={{ link.href }}>{{ link.title }}</a></li>
+  {% else %}
+  <li>
+    {{ link.title }}:
     <a rel="me" href={{ link.href }}>
       {{ link.text }}
     </a>
   </li>
+  {% endunless %}
   {% endfor %}
 </ul>
 {% endif %}

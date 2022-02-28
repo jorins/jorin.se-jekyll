@@ -1,8 +1,6 @@
 <h1>Navigation</h1>
 <ul>
-  {% for page in site.pages %}
-  {% if page.title %}
-  <li><a href={{ page.permalink }}>{{ page.title }}</a>: {{ page.description }}</li>
-  {% endif %}
+  {% for coll in site.collections %}
+  <li><a href={{ coll.permalink }}>{{ coll.title }}</a>: {{ page.description }}</li>
   {% endfor %}
 </ul>
