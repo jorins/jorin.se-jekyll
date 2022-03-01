@@ -12,7 +12,7 @@ collections_dir: collection
 collections:
   ramble:
     output: true
-    title: Jorin's rambles
+    title: Jorin's Rambles
     short_title: Rambles
     description: blog
     group_field: null
