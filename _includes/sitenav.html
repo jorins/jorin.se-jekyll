@@ -1,6 +1,8 @@
 <h1>Navigation</h1>
 <ul>
   {% for coll in site.collections %}
-  <li><a href={{ coll.permalink }}>{{ coll.title }}</a>: {{ page.description }}</li>
+  {% unless coll.label == 'posts' %}
+  <li><a href={{ coll.label }}>{{ coll.title }}: {{ coll.description }}</a></li>
+  {% endunless %}
   {% endfor %}
 </ul>
