@@ -59,21 +59,21 @@ defaults:
   -
     scope:
       path: ''
-      type: article
+      type: ramble
     values:
       layout: post
   -
     scope:
       path: ''
-      type: note
+      type: grimoire
     values:
-      layout: note
+      layout: grimoire
   -
     scope:
       path: ''
-      type: project
+      type: machination
     values:
-      layout: project
+      layout: machination
 
 minima:
   skin: melatonin
