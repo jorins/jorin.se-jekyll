@@ -1,7 +1,6 @@
 ---
 en: Capacitor
 sv: Kondensator
-category: electronics
 
 related:
   - inductor
