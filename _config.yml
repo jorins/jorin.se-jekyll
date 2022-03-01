@@ -8,6 +8,32 @@ plugins:
   - jekyll-sitemap
   - jemoji
 
+collections_dir: collection
+collections:
+  ramble:
+    output: true
+    title: Jorin's rambles
+    short_title: Rambles
+    description: blog
+    group_field: null
+    sort_field: date
+
+  grimoire:
+    output: true
+    title: The Grimoire of Jorin
+    short_title: Grimoire
+    description: personal wiki
+    group_field: tags
+    sort_field: title
+
+  machination:
+    output: true
+    title: Jorin's Machinations
+    short_title: Machinations
+    description: project logs and documentation
+    group_field: tags
+    sort_field: last_updated
+
 pagination:
   enabled: true
   per_page: 10
@@ -28,18 +54,6 @@ autopages:
     slugify: 
       mode: default
       case: true
-
-
-collections_dir: collection
-collections:
-  article:
-    output: true
-
-  note:
-    output: true
-
-  project:
-    output: true
 
 defaults:
   -
