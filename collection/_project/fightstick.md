@@ -1,4 +1,4 @@
 ---
-title: \'The Usher' Fightstick
+title: "'The Usher' Fightstick"
 ---
 I made a fightstick once.
