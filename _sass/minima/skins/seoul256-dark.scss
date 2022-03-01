@@ -1,218 +1,70 @@
-// Colours imported from https://github.com/junegunn/seoul256.vim/blob/master/kde/seoul256.colorscheme
-$background: rgb(58, 58, 58);
-$backgroundIntense: rgb(58, 58, 58);
-$color0: rgb(78, 78, 78);
-$color0Intense: rgb(98, 98, 98);
-$color1: rgb(214, 135, 135);
-$color1Intense: rgb(215, 95, 135);
-$color2: rgb(95, 134, 95);
-$color2Intense: rgb(135, 175, 135);
-$color3: rgb(216, 175, 95);
-$color3Intense: rgb(255, 215, 135);
-$color4: rgb(133, 172, 212);
-$color4Intense: rgb(172, 212, 250);
-$color5: rgb(215, 175, 175);
-$color5Intense: rgb(255, 175, 175);
-$color6: rgb(135, 175, 175);
-$color6Intense: rgb(135, 215, 215);
-$color7: rgb(208, 208, 208);
-$color7Intense: rgb(228, 228, 228);
-$foreground: rgb(208, 208, 208);
-$foregroundIntense: rgb(208, 208, 208);
-$a: #ffffff;
+// Colours from https://github.com/junegunn/seoul256.vim
 
 .highlight {
-  .c {
-    color: #545454;
-    font-style: italic;
-  } // Comment
-  .err {
-    color: #f07178;
-    background-color: #e3d2d2;
-  } // Error
-  .k {
-    color: #89ddff;
-    font-weight: bold;
-  } // Keyword
-  .o {
-    font-weight: bold;
-  } // Operator
-  .cm {
-    color: #545454;
-    font-style: italic;
-  } // Comment.Multiline
-  .cp {
-    color: #545454;
-    font-weight: bold;
-  } // Comment.Preproc
-  .c1 {
-    color: #545454;
-    font-style: italic;
-  } // Comment.Single
-  .cs {
-    color: #545454;
-    font-weight: bold;
-    font-style: italic;
-  } // Comment.Special
-  .gd {
-    color: #000;
-    background-color: #fdd;
-  } // Generic.Deleted
-  .gd .x {
-    color: #000;
-    background-color: #faa;
-  } // Generic.Deleted.Specific
-  .ge {
-    font-style: italic;
-  } // Generic.Emph
-  .gr {
-    color: #f07178;
-  } // Generic.Error
-  .gh {
-    color: #999;
-  } // Generic.Heading
-  .gi {
-    color: #000;
-    background-color: #dfd;
-  } // Generic.Inserted
-  .gi .x {
-    color: #000;
-    background-color: #afa;
-  } // Generic.Inserted.Specific
-  .go {
-    color: #888;
-  } // Generic.Output
-  .gp {
-    color: #555;
-  } // Generic.Prompt
-  .gs {
-    font-weight: bold;
-  } // Generic.Strong
-  .gu {
-    color: #aaa;
-  } // Generic.Subheading
-  .gt {
-    color: #f07178;
-  } // Generic.Traceback
-  .kc {
-    font-weight: bold;
-  } // Keyword.Constant
-  .kd {
-    font-weight: bold;
-  } // Keyword.Declaration
-  .kp {
-    font-weight: bold;
-  } // Keyword.Pseudo
-  .kr {
-    font-weight: bold;
-  } // Keyword.Reserved
-  .kt {
-    color: #ffcb6b;
-    font-weight: bold;
-  } // Keyword.Type
-  .m {
-    color: #f78c6c;
-  } // Literal.Number
-  .s {
-    color: #c3e88d;
-  } // Literal.String
-  .na {
-    color: #008080;
-  } // Name.Attribute
-  .nb {
-    color: #eeffff;
-  } // Name.Builtin
-  .nc {
-    color: #ffcb6b;
-    font-weight: bold;
-  } // Name.Class
-  .no {
-    color: #008080;
-  } // Name.Constant
-  .ni {
-    color: #800080;
-  } // Name.Entity
-  .ne {
-    color: #900;
-    font-weight: bold;
-  } // Name.Exception
-  .nf {
-    color: #82aaff;
-    font-weight: bold;
-  } // Name.Function
-  .nn {
-    color: #555;
-  } // Name.Namespace
-  .nt {
-    color: #ffcb6b;
-  } // Name.Tag
-  .nv {
-    color: #eeffff;
-  } // Name.Variable
-  .ow {
-    font-weight: bold;
-  } // Operator.Word
-  .w {
-    color: #eeffff;
-  } // Text.Whitespace
-  .mf {
-    color: #f78c6c;
-  } // Literal.Number.Float
-  .mh {
-    color: #f78c6c;
-  } // Literal.Number.Hex
-  .mi {
-    color: #f78c6c;
-  } // Literal.Number.Integer
-  .mo {
-    color: #f78c6c;
-  } // Literal.Number.Oct
-  .sb {
-    color: #c3e88d;
-  } // Literal.String.Backtick
-  .sc {
-    color: #c3e88d;
-  } // Literal.String.Char
-  .sd {
-    color: #c3e88d;
-  } // Literal.String.Doc
-  .s2 {
-    color: #c3e88d;
-  } // Literal.String.Double
-  .se {
-    color: #eeffff;
-  } // Literal.String.Escape
-  .sh {
-    color: #c3e88d;
-  } // Literal.String.Heredoc
-  .si {
-    color: #c3e88d;
-  } // Literal.String.Interpol
-  .sx {
-    color: #c3e88d;
-  } // Literal.String.Other
-  .sr {
-    color: #c3e88d;
-  } // Literal.String.Regex
-  .s1 {
-    color: #c3e88d;
-  } // Literal.String.Single
-  .ss {
-    color: #c3e88d;
-  } // Literal.String.Symbol
-  .bp {
-    color: #999;
-  } // Name.Builtin.Pseudo
-  .vc {
-    color: #ffcb6b;
-  } // Name.Variable.Class
-  .vg {
-    color: #eeffff;
-  } // Name.Variable.Global
-  .vi {
-    color: #eeffff;
-  } // Name.Variable.Instance
-  .il {
-    color: #f78c6c;
-  } // Literal.Number.Integer.Long
+  pre { background-color: #252525; }
+  .hll { background-color: #252525; }
+  .c { color: #719862 } /* Comment */
+  .err { color: #d9d9d9; background-color: #730b00 } /* Error */
+  .k { color: #e17899 } /* Keyword */
+  .l { color: #98bc99 } /* Literal */
+  .n { color: #d9d9d9 } /* Name */
+  .o { color: #dedd99 } /* Operator */
+  .p { color: #d9d9d9 } /* Punctuation */
+  .cm { color: #719872 } /* Comment.Multiline */
+  .cp { color: #719872 } /* Comment.Preproc */
+  .c1 { color: #719872 } /* Comment.Single */
+  .cs { color: #ffbd98 } /* Comment.Special */
+  .ge { font-style: italic } /* Generic.Emph */
+  .gs { font-weight: bold } /* Generic.Strong */
+  .kc { color: #6fbcbd } /* Keyword.Constant */
+  .kd { color: #e17899 } /* Keyword.Declaration */
+  .kn { color: #e17899 } /* Keyword.Namespace */
+  .kp { color: #e17899 } /* Keyword.Pseudo */
+  .kr { color: #e17899 } /* Keyword.Reserved */
+  .kt { color: #dfbc72; font-weight: bold } /* Keyword.Type */
+  .ld { color: #be9873 } /* Literal.Date */
+  .m { color: #ffde99 } /* Literal.Number */
+  .s { color: #98bcbd } /* Literal.String */
+  .na { color: #dfdebd } /* Name.Attribute */
+  .nb { color: #d9d9d9 } /* Name.Builtin */
+  .nc { color: #dfbc72; font-weight: bold } /* Name.Class */
+  .no { color: #6fbcbd } /* Name.Constant */
+  .nd { color: #dfdebd } /* Name.Decorator */
+  .ni { color: #d9d9d9 } /* Name.Entity */
+  .ne { color: #e12672 } /* Name.Exception */
+  .nf { color: #dfdebd } /* Name.Function */
+  .nl { color: #ffbfbd } /* Name.Label */
+  .nn { color: #ffbfbd } /* Name.Namespace */
+  .nx { color: #ffbfbd } /* Name.Other */
+  .py { color: #d9d9d9 } /* Name.Property */
+  .nt { color: #f92672 } /* Name.Tag */
+  .nv { color: #d9d9d9 } /* Name.Variable */
+  .ow { color: #dedd99 } /* Operator.Word */
+  .w { color: #727272 } /* Text.Whitespace */
+  .mf { color: #ffde99 } /* Literal.Number.Float */
+  .mh { color: #ffde99 } /* Literal.Number.Hex */
+  .mi { color: #ffde99 } /* Literal.Number.Integer */
+  .mo { color: #ffde99 } /* Literal.Number.Oct */
+  .il { color: #ffde99 } /* Literal.Number.Integer.Long */
+  .sb { color: #be9873 } /* Literal.String.Backtick */
+  .sc { color: #be9873 } /* Literal.String.Char */
+  .sd { color: #be9873 } /* Literal.String.Doc */
+  .s2 { color: #be9873 } /* Literal.String.Double */
+  .se { color: #be9873 } /* Literal.String.Escape */
+  .sh { color: #be9873 } /* Literal.String.Heredoc */
+  .si { color: #be9873 } /* Literal.String.Interpol */
+  .sx { color: #be9873 } /* Literal.String.Other */
+  .sr { color: #be9873 } /* Literal.String.Regex */
+  .s1 { color: #be9873 } /* Literal.String.Single */
+  .ss { color: #be9873 } /* Literal.String.Symbol */
+  .bp { color: #ffbfbd } /* Name.Builtin.Pseudo */
+  .vc { color: #ffbfbd } /* Name.Variable.Class */
+  .vg { color: #ffbfbd } /* Name.Variable.Global */
+  .vi { color: #ffbfbd } /* Name.Variable.Instance */
+  .gh { background-color: #4b4b4b; color: d9d9d9; font-weight: bold; } /* Generic Heading & Diff Header */
+  .gu { background-color: #4b4b4b; color: d9d9d9; } /* Generic.Subheading & Diff Unified/Comment? */
+  .gd { background-color: #9a7372; } /* Generic.Deleted & Diff Deleted */
+  .gi { background-color: #006f00; } /* Generic.Inserted & Diff Inserted */
 }
+
+
