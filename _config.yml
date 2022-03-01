@@ -58,8 +58,8 @@ autopages:
   tags:
     layouts:
       - tag.html
-    title: "':tag' in :coll"
-    permalink: /:coll/:tag
+    title: :tag
+    permalink: /tag/:tag
     silent: false
     slugify:
       mode: default
