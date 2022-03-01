@@ -3,51 +3,50 @@ layout: default
 ---
 {% assign collection = site.collections | where: 'label', page.autopages.display_name | first %}
 
-<div>
-  {% if page.autopages %}
-  <h1>
-    {{collection.title}}
-  </h1>
-  {% endif %}
+{% if page.autopages %}
+<h1>
+  {{collection.title}}
+</h1>
+{% endif %}
 
-  {% comment %}
-  <p class="rss-subscribe">subscribe <a href="{{ '/feed.xml' | relative_url }}">via RSS</a></p>
-  {% endcomment %}
+{% comment %}
+<p class="rss-subscribe">subscribe <a href="{{ '/feed.xml' | relative_url }}">via RSS</a></p>
+{% endcomment %}
 
-  <p class='collection-page-counter'>
-    Page {{page.pagination_info.curr_page}} of {{page.pagination_info.total_pages}}
-  </p>
+<p class='collection-page-counter'>
+  Page {{page.pagination_info.curr_page}} of {{page.pagination_info.total_pages}}
+</p>
 
-  {{ content | markdownify }}
+{{ content | markdownify }}
 
-  <ul class="post-list">
-    {% for post in paginator.posts %}
-    <li>
-      <h2>
-        <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-      </h2>
-      <span class="post-meta">
-        <span class="post-date">
-          {{ post.date | date: "%b %-d, %Y" }}
-        </span>
-        <span class="post-tags">
-          {% if post.tags %}
-          Tags: {{ post.tags }}
-          {% endif %}
-        </span>
+<ul class="post-list">
+  {% for post in paginator.posts %}
+  <li>
+    <h2>
+      <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+    </h2>
+    <span class="post-meta">
+      <span class="post-date">
+        {{ post.date | date: "%b %-d, %Y" }}
       </span>
-    </li>
-    {% endfor %}
-  </ul>
+      <span class="post-tags">
+        {% if post.tags %}
+        Tags: {{ post.tags }}
+        {% endif %}
+      </span>
+    </span>
+  </li>
+  {% endfor %}
+</ul>
 
-  {% if paginator.total_pages > 1 %}
-  <div class="pager">
-    {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-    {% endif %}
-    {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-    {% endif %}
-    </ul>
-    {% endif %}
-  </div>
+{% if paginator.total_pages > 1 %}
+<div class="pager">
+  {% if paginator.previous_page %}
+  <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+  {% endif %}
+  {% if paginator.next_page %}
+  <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+  {% endif %}
+  </ul>
+  {% endif %}
+</div>
