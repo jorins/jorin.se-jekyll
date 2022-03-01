@@ -2,24 +2,34 @@
 layout: default
 ---
 
-{% if page.en and page.sv %}
-<h1>{{ page.en }} <span class='note-name-translated'>(sv: {{ page.sv }})</span></h1>
-{% else if page.en %}
-<h1>{{ page.en }}</h1>
-{% else if page.sv %}
-<h1>{{ page.sv }}</h1>
-{% endif %}
+{% assign collection = site.collections | where: 'label', 'grimoire' | first %}
+{% assign pages = site.grimoire %}
+{% assign en = page.en | capitalize %}
+{% assign en_d = en | downcase %}
+{% assign sv = page.sv | capitalize %}
+{% assign sv_d = sv | downcase %}
+
+<span class='heading-navigation-tree grimoire-heading-navigation-tree'>
+  {% if page.en and page.sv %}
+  <h1>{{ page.en }} <span class='note-name-translated' lang='sv'>(sv: {{ page.sv
+      }})</span></h1>
+  {% elsif page.en %}
+  <h1>{{ page.en }}</h1>
+  {% elsif page.sv %}
+  <h1>{{ page.sv }}</h1>
+  {% else %}
+  <h1>{{ page.title }}</h1>
+  {% endif %}
+
+  {% unless page.tags == empty %}
+  Tags:
+  {% for tag in page.tags %}
+  <a href={{ '/grimoire/' | append: tag }}>{{ tag }}</a>{% unless forloop.last %}, {% endunless %}
+  {% endfor %}
+  {% endunless %}
+</span>
 
 {{ content }}
-
-{% if page.sources %}
-<h1>Sources</h1>
-<ol>
-  {% for source in page.sources %}
-  <li><a href={{ source.link }}>{{ source.name }}</a></li>
-  {% endfor %}
-</ol>
-{% endif %}
 
 {% if page.en or page.sv or page.further-reading %}
 <h1>Further reading</h1>
@@ -27,25 +37,55 @@ layout: default
   {% if page.further-reading %}
   {% for resource in page.further-reading %}
   <li>
-    <a href={{ resource.link }}>{{ resource.name }}</a>
+    <a {% if resource.lang %} lang={{resource.lang}} {% endif %} target='_blank' href={{ resource.link }}>{{
+      resource.name }}</a>
   </li>
   {% endfor %}
   {% endif %}
   {% if page.en %}
   <li>
-    <a href='https://en.wikipedia.org/wiki/{{ page.en }}'>Wikipedia (en)</a>
+    <a target='_blank' href='https://en.wikipedia.org/wiki/{{ page.en }}'>Wikipedia (en)</a>
   </li>
   <li>
-    <a href='https://en.wiktionary.org/wiki/{{ page.en | downcase }}'>Wiktionary (en)</a>
+    <a target='_blank' href='https://en.wiktionary.org/wiki/{{ page.en | downcase }}'>Wiktionary (en)</a>
   </li>
   {% endif %}
   {% if page.sv %}
   <li>
-    <a href='https://sv.wikipedia.org/wiki/{{ page.sv }}'>Wikipedia (sv)</a>
+    <a lang='sv' target='_blank' href='https://sv.wikipedia.org/wiki/{{ page.sv }}'>Wikipedia (sv)</a>
   </li>
   <li>
-    <a href='https://sv.wiktionary.org/wiki/{{ page.sv | downcase }}'>Wiktionary (sv)</a>
+    <a lang='sv' target='_blank' href='https://sv.wiktionary.org/wiki/{{ page.sv | downcase }}'>Wiktionary (sv)</a>
   </li>
   {% endif %}
 </ul>
 {% endif %}
+
+{% unless page.related == empty %}
+<h1>Related entries</h1>
+<ul>
+  {% for related in page.related %}
+  {% assign related_page = pages | where: 'slug', related | first %}
+
+  {% comment %} Check for existence of related page {% endcomment %}
+  {% unless related_page %}
+  <li>
+    {{ related | capitalize }} (page missing)
+  </li>
+  {% else %}
+  <li>
+    {% capture related_title %}
+    {% if related_page.en %}{{ related_page.en }}
+    {% elsif related_page.title %}{{ related_page.title }}
+    {% else %}{{ related | capitalize }}
+    {% endif %}
+    {% endcapture %}
+
+    <a href={{ related_page.id }}>{{ related_title }}</a>
+  </li>
+  {% endunless %}
+  {% endfor %}
+</ul>
+<ul>
+</ul>
+{% endunless %}
