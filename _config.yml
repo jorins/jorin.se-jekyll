@@ -37,7 +37,7 @@ collections:
 pagination:
   enabled: true
   per_page: 10
-  permalink: /:year/:month/:title.html
+  permalink: /:year/:month/:title:output_ext
   title: ' - page :num'
   limit: 0
   sort_field: date
@@ -47,11 +47,21 @@ autopages:
   enabled: true
   collections:
     layouts:
-      - autopage_collection.html
+      - collection.html
     title: :coll
     permalink: /:coll
     silent: false
-    slugify: 
+    slugify:
+      mode: default
+      case: true
+
+  tags:
+    layouts:
+      - tag.html
+    title: "':tag' in :coll"
+    permalink: /:coll/:tag
+    silent: false
+    slugify:
       mode: default
       case: true
 
