@@ -46,15 +46,12 @@ pagination:
 
 autopages:
   enabled: true
+
+  categories:
+    enabled: false
+
   collections:
-    layouts:
-      - collection.html
-    title: :coll
-    permalink: /:coll
-    silent: false
-    slugify:
-      mode: default
-      case: true
+    enabled: false
 
   tags:
     layouts:
@@ -67,6 +64,11 @@ autopages:
       case: true
 
 defaults:
+  -
+    scope:
+      path: 'collection/*/index.md'
+    values:
+      layout: collection
   -
     scope:
       path: ''
