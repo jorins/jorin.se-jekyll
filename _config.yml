@@ -6,6 +6,7 @@ plugins:
   - jekyll-paginate-v2
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-toc
   - jemoji
 
 collections_dir: collection
@@ -72,18 +73,21 @@ defaults:
       type: ramble
     values:
       layout: post
+      toc: true
   -
     scope:
       path: ''
       type: grimoire
     values:
       layout: grimoire
+      toc: true
   -
     scope:
       path: ''
       type: machination
     values:
       layout: machination
+      toc: true
 
 minima:
   skin: melatonin

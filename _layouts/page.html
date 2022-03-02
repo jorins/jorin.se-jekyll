@@ -1,0 +1,9 @@
+---
+layout: default
+---
+
+{% if page.toc %}
+{% include toc.html %}
+{% endif %}
+
+{{ content | inject_anchors }}
