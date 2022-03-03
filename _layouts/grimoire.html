@@ -37,25 +37,36 @@ layout: page
   {% if page.further-reading %}
   {% for resource in page.further-reading %}
   <li>
-    <a {% if resource.lang %} lang={{resource.lang}} {% endif %} target='_blank' href={{ resource.link }}>{{
-      resource.name }}</a>
+    <a {% if resource.lang %} lang={{resource.lang}} {% endif %} target='_blank' href={{ resource.link }}>
+      {{ resource.name }}
+    </a>
   </li>
   {% endfor %}
   {% endif %}
+
   {% if page.en %}
   <li>
-    <a target='_blank' href='https://en.wikipedia.org/wiki/{{ page.en }}'>Wikipedia (en)</a>
+    <a target='_blank' href='https://en.wikipedia.org/wiki/{{ page.en }}'>
+      Wikipedia (en)
+    </a>
   </li>
   <li>
-    <a target='_blank' href='https://en.wiktionary.org/wiki/{{ page.en | downcase }}'>Wiktionary (en)</a>
+    <a target='_blank' href='https://en.wiktionary.org/wiki/{{ page.en | downcase }}'>
+      Wiktionary (en)
+    </a>
   </li>
   {% endif %}
+
   {% if page.sv %}
   <li>
-    <a lang='sv' target='_blank' href='https://sv.wikipedia.org/wiki/{{ page.sv }}'>Wikipedia (sv)</a>
+    <a lang='sv' target='_blank' href='https://sv.wikipedia.org/wiki/{{ page.sv }}'>
+      Wikipedia (sv)
+    </a>
   </li>
   <li>
-    <a lang='sv' target='_blank' href='https://sv.wiktionary.org/wiki/{{ page.sv | downcase }}'>Wiktionary (sv)</a>
+    <a lang='sv' target='_blank' href='https://sv.wiktionary.org/wiki/{{ page.sv | downcase }}'>
+      Wiktionary (sv)
+    </a>
   </li>
   {% endif %}
 </ul>
