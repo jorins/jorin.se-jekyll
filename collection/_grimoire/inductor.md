@@ -1,4 +1,5 @@
 ---
+title: Inductor
 en: Inductor
 sv: Induktor
 

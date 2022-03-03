@@ -1,4 +1,5 @@
 ---
+title: Capacitor
 en: Capacitor
 sv: Kondensator
 
