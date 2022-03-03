@@ -1,0 +1,32 @@
+{% assign img = site.data.images | where: 'path', include.i | first %}
+{% assign file = img.path | split: '.' %}
+{% assign filename = file[0] %}
+{% assign ext = file[1] %}
+
+<figure>
+
+  {% if ext == 'svg' %}
+  <div class='svg-wrapper'>
+    {% endif %}
+    <img src="{{ '/img/' | append: img.path }}" />
+    {% if ext == 'svg' %}
+  </div>
+  {% endif %}
+  <figcaption>
+    <span class="img-description">
+      {{ img.description }}
+    </span>
+
+    <a class="img-attribution" target="_blank" href="{{ img.link }}">
+      {% if img.author %}
+      <br>
+      Image by {{ img.author }}.
+      {% endif %}
+
+      {% if img.license %}
+      <br>
+      License: {{ img.license }}.
+      {% endif %}
+    </a>
+  </figcaption>
+</figure>
