@@ -10,7 +10,7 @@ layout: page
 {% assign sv_d = sv | downcase %}
 
 <span class='heading-navigation-tree grimoire-heading-navigation-tree'>
-  {% if page.en and page.sv %}
+  {% if page.en and page.sv and page.en != page.sv %}
   <h1>{{ page.en }} <span class='note-name-translated' lang='sv'>(sv: {{ page.sv
       }})</span></h1>
   {% elsif page.en %}
