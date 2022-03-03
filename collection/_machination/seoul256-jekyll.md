@@ -104,7 +104,7 @@ To outline the process:
 4. Remove style-rules related only to plugins to clean things up. I found I had
    hundreds if not thousands of selectors for
    [CHADtree](https://github.com/ms-jpq/chadtree) and
-   [nvim-colorizer.lua](https://github.com/norcalli/nvim-colorizer.lua).[^1]
+   [nvim-colorizer.lua](https://github.com/norcalli/nvim-colorizer.lua).[^not-a-dig]
 5. Copy an existing stylesheet, e.g [minima
    classic](https://github.com/jekyll/minima/blob/master/_sass/minima/skins/classic.scss)
 6. Replace the values of the stylesheet you copied with the values you got from
@@ -120,4 +120,4 @@ further on this.
 
 # Footnotes
 
-[^1]: This is not a dig at either plugin; I use them because they are both great at what they do. Their internal workings are beyond my expertise and I do not judge their code by this metric.
+[^not-a-dig]: This is not a dig at either plugin; I use them because they are both great at what they do. Their internal workings are beyond my expertise and I do not judge their code by this metric.
