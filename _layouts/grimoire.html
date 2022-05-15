@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 ---
 
 {% assign collection = site.collections | where: 'label', 'grimoire' | first %}
@@ -32,6 +32,7 @@ layout: page
 {{ content }}
 
 {% if page.en or page.sv or page.further-reading %}
+<hr />
 <h1>Further reading</h1>
 <ul>
   {% if page.further-reading %}
@@ -72,7 +73,8 @@ layout: page
 </ul>
 {% endif %}
 
-{% unless page.related == empty %}
+{% if page.related and page.related != empty %}
+<hr />
 <h1>Related entries</h1>
 <ul>
   {% for related in page.related %}
@@ -99,4 +101,4 @@ layout: page
 </ul>
 <ul>
 </ul>
-{% endunless %}
+{% endif %}

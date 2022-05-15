@@ -1,0 +1,32 @@
+@import 'constants';
+
+// Desktop tweaks
+@media
+  // Use `not max` instead of `min` to exclude 3:4 devices (iPad) and less
+  only screen and (not max-aspect-ratio: 3 / 4),
+  // but make sure to include large devices regardless
+  only screen and (min-width: 50rem)
+
+  // Functionally equivalent to `(aspect-ratio > 3/4) or (width >= 50rem)`
+  // https://caniuse.com/mdn-css_at-rules_media_range_syntax
+{
+  // Layout
+  #site-container {
+    grid-template-areas:
+      "nav main"
+      "toc main"
+      "  . main";
+  }
+
+  // Sticky ToC
+  #table-of-contents {
+    align-self: start;
+    top: $gap;
+    position: sticky;
+  }
+
+  // Header adjustments
+  #site-navigation > header { flex-direction: column; }
+  #emblem { width: 100%; }
+  #header-filler { display: none; }
+}

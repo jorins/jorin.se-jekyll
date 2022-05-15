@@ -1,8 +1,0 @@
-<h1>Navigation</h1>
-<ul>
-  {% for coll in site.collections %}
-  {% unless coll.label == 'posts' %}
-  <li><a href={{ coll.label | prepend: '/' }}>{{ coll.title }}: {{ coll.description }}</a></li>
-  {% endunless %}
-  {% endfor %}
-</ul>

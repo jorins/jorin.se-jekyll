@@ -1,13 +1,14 @@
 ---
 layout: default
+toc: false
 ---
-{% assign collection = site.collections | where: 'label', page.autopages.display_name | first %}
 
-{% if page.autopages %}
+{% assign collection = site.collections | where: 'label', page.collection | first %}
+{% assign pages = site[collection.label] %}
+
 <h1>
   {{ collection.title }}
 </h1>
-{% endif %}
 
 {% comment %}
 TODO: Re-introduce this later
@@ -17,8 +18,6 @@ TODO: Re-introduce this later
 <p class='collection-page-counter'>
   Page {{page.pagination_info.curr_page}} of {{page.pagination_info.total_pages}}
 </p>
-
-{{ content | markdownify }}
 
 <ul class="post-list">
   {% for post in paginator.posts %}
@@ -48,6 +47,5 @@ TODO: Re-introduce this later
   {% if paginator.next_page %}
   <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
   {% endif %}
-  </ul>
-  {% endif %}
 </div>
+{% endif %}

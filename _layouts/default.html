@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang={{ site.lang | default: 'en' }}>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+  {% feed_meta %}
+</head>
+
+<body>
+  <div id="site-container">
+    {% include nav.html %}
+
+    {% if page.toc == true %}
+    {% include toc.html %}
+    {% endif %}
+
+    <main class='site-block'>
+      {{ content | inject_anchors }}
+    </main>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+@import 'constants';
+
+// Normalisation
+body, #site-container, {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// FIXME: this gutter looks awful
+html {
+  scrollbar-gutter: stable;
+}
+
+body {
+  max-width: 100%;
+  min-height: 100vh;
+
+  // Get content centered properly
+  display: grid;
+  justify-items: center;
+  align-items: stretch;
+  padding: $gap;
+}
+
+#site-container {
+  // Layout definition
+  display: grid;
+  gap: $gap;
+
+  // Mobile defaults
+  grid-template-columns: 15rem 1fr;
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas: "nav nav" "toc toc" "main main";
+
+  justify-content: stretch;
+  align-items: stretch;
+
+  // Cap overall site width
+  max-width: 100rem;
+  width: 100%;
+}
+
+// Site blocks
+main { grid-area: main; }
+#site-navigation { grid-area: nav; }
+#table-of-contents { grid-area: toc; }
+
+.site-block {
+  border-radius: $border-radius;
+  background: $glass;
+  padding: $gap;
+  margin: 0
+}
+
+// Specifics
+#site-navigation > header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#emblem, #header-filler {
+  margin: 1em;
+  width: 5em;
+}

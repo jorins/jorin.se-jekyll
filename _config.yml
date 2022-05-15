@@ -1,7 +1,5 @@
 title: Jorin's webbed sight
-remote_theme: jekyll/minima
 plugins:
-  - jekyll-remote-theme
   - jekyll-feed
   - jekyll-paginate-v2
   - jekyll-seo-tag
@@ -69,6 +67,7 @@ defaults:
       path: 'collection/*/index.md'
     values:
       layout: collection
+      toc: false
   -
     scope:
       path: ''
