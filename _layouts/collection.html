@@ -15,37 +15,10 @@ TODO: Re-introduce this later
 <p class="rss-subscribe">subscribe <a href="{{ '/feed.xml' | relative_url }}">via RSS</a></p>
 {% endcomment %}
 
-<p class='collection-page-counter'>
-  Page {{page.pagination_info.curr_page}} of {{page.pagination_info.total_pages}}
-</p>
-
-<ul class="post-list">
-  {% for post in paginator.posts %}
+<ul class="page-list">
+  {% for page in pages %}
   <li>
-    <h2>
-      <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-    </h2>
-    <span class="post-meta">
-      <span class="post-date">
-        {{ post.date | date: "%b %-d, %Y" }}
-      </span>
-      <span class="post-tags">
-        {% if post.tags %}
-        Tags: {{ post.tags }}
-        {% endif %}
-      </span>
-    </span>
+    <a class="page-link" href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
   </li>
   {% endfor %}
 </ul>
-
-{% if paginator.total_pages > 1 %}
-<div class="pager">
-  {% if paginator.previous_page %}
-  <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-  {% endif %}
-  {% if paginator.next_page %}
-  <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-  {% endif %}
-</div>
-{% endif %}
