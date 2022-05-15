@@ -15,7 +15,7 @@ Check it out below.
 # Examples
 
 ## C example
-~~~ c
+~~~c
 #include "ruby/ruby.h"
 
 static int
@@ -90,7 +90,7 @@ Python and it wasn't working out for me in part due to the complexity of the
 work on modern Python (it was eight years old :scream:).
 
 I cut out some middle-steps at the cost of some added manual labour to get the
-job done instead. Since vim is a scriptable editor, I figured it woult be no
+job done instead. Since vim is a scriptable editor, I figured it would be no
 problem exporting the colours if I could just figure out how, and I was right.
 
 To outline the process:
