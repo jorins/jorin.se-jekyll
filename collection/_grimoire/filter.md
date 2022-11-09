@@ -14,6 +14,8 @@ related:
 
 A filter is a process that removes frequencies from a signal.
 
+---
+
 # In audio
 
 ## Filter or equaliser?
@@ -35,6 +37,8 @@ low frequencies. An excellent example of an envelope filter in metal is
 An auto-wah is a form of envelope filter that uses a band-pass filter instead
 of a low-pass filter. Other types of filters are less commonly used with
 envelopes.
+
+---
 
 # Types
 
@@ -72,7 +76,10 @@ removed.
 No frequencies are removed. However, [phase](/grimoire/phase) is altered around
 a target frequency.
 
+---
+
 # Implementations
+
 ## Passive filter
 
 Passive filters are most commonly constructed using capacitors and resistors.
