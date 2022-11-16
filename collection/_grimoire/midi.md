@@ -15,9 +15,6 @@ further-reading:
 
 images:
   - midi-din
-  - midi-din
-  - midi-din
-  - midi-din
 ---
 
 MIDI is a protocol used to transmit data about musical events.
@@ -43,9 +40,6 @@ for a long time. There are three TRS variants.
 
 # Gallery
 
-{% include img.html i='midi-din.svg' %}
-{% include img.html i='midi-din.svg' %}
-{% include img.html i='midi-din.svg' %}
 {% include img.html i='midi-din.svg' %}
 
 ---
