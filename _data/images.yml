@@ -3,3 +3,9 @@
   author: Fred the Oyster
   license: CC-BY-SA
   link: 'https://commons.wikimedia.org/wiki/File:MIDI_connector2.svg'
+
+- path: si-diagram.svg
+  description: A diagram of SI units and their relation to each other
+  author: NIST
+  license: Public domain
+  link: 'https://physics.nist.gov/cuu/Units/SIdiagram.html'
